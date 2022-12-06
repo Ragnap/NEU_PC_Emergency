@@ -1,0 +1,94 @@
+/*字体导入*/
+@font-face {
+    font-family: SmileySans;
+    src: url("../src/font/SmileySans/SmileySans-Oblique.otf.woff2") format("woff"),
+    url("../src/font/SmileySans/SmileySans-Oblique.otf") format("opentype"),
+    url("../src/font/SmileySans/SmileySans-Oblique.ttf") format("truetype");
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/*基本图片*/
+.scene {
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: 100vmin;
+    background-position: center;
+}
+
+/*第一个图片，主图片*/
+.main {
+    background-color: rgb(213, 181, 181);
+    background-image: url(../src/pictures/pixel_PC.png);
+}
+
+.hardware_library {
+    background-color: rgb(189, 134, 105);
+    background-image: url(../src/pictures/pixel_TV.png);
+}
+
+.software_library {
+    background-color: rgb(189, 134, 105);
+    background-image: url(../src/pictures/pixel_TV.png);
+}
+
+.appointment {
+    background-color: rgb(228, 223, 170);
+    background-image: url(../src/pictures/pixel_BUS.png);
+}
+
+/*主页上标题文字动画*/
+.main_title {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    height: 160px;
+    font-family: "SmileySans", sans-serif;
+    font-size: 200px;
+    color: rgb(114, 141, 224);
+}
+
+
+.main_title_container {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    font-weight: 600;
+    height: 200px;
+
+    overflow: hidden;
+}
+
+.main_title_text_fixed {
+    display: inline;
+    float: right;
+    margin: 0;
+    line-height: 1;
+}
+
+.main_title_text_changing {
+    margin: 0;
+    float: left;
+    text-align: left;
+    list-style: none;
+
+    animation: change 5s infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.main_title_text_changing_item {
+    line-height: 210px;
+}
+
+@keyframes change {
+    0%, 30%, 100% {
+        transform: translate3d(0, 0, 0);
+    }
+    50%, 80% {
+        transform: translate3d(0, -50%, 0);
+    }
+}
