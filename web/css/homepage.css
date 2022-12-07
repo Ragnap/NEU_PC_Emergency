@@ -6,82 +6,125 @@
     url("../src/font/SmileySans/SmileySans-Oblique.ttf") format("truetype");
 }
 
+/**********动画部分*************/
+/*文字阴影立体效果*/
+.text-shadow-pop {
+    text-shadow: 0 0 rgb(38, 48, 69);
+    transition-duration: 0.5s;
+}
+.text-shadow-pop:hover {
+    text-shadow:8px 8px rgb(38, 48, 69);
+    transition-duration: 1s;
+}
+
+/*背景加强移动颜色*/
+.cross_highlight{
+    position: relative;
+    z-index: 1;
+}
+.cross_highlight::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: -0.25em;
+    right: -0.25em;
+    background-color: rgb(189, 134, 105);
+    transform-origin: center right;
+    transform: scaleX(0) scaleY(0.6);
+    transition: transform 0.2s ease-in-out;
+}
+.cross_highlight:hover::before {
+    transform: scaleX(1) scaleY(0.6);
+    transform-origin: center left;
+}
+
+/**********常用的字体设定********/
+/*用于标题的大号字体*/
+.huge {
+    font-size: 200px;
+}
+
+/*用于小行的描述字体*/
+.describe {
+    font-size: 25px;
+}
+
+/*用于小行的描述字体*/
+.smiley_sans {
+    font-family: "SmileySans", sans-serif;
+}
+
+/*删除线*/
+.delete_line {
+    text-decoration: line-through;
+}
+
+/**********页面结构*********/
 body {
     margin: 0;
     padding: 0;
+
 }
 
 /*基本图片*/
 .scene {
     height: 100vh;
     background-repeat: no-repeat;
-    background-size: 100vmin;
+    background-size: 100vw;
     background-position: center;
+
 }
 
 /*第一个图片，主图片*/
 .main {
-    background-color: rgb(213, 181, 181);
+    background-color: rgb(38, 48, 69);
     background-image: url(../src/pictures/pixel_PC.png);
 }
 
-.hardware_library {
-    background-color: rgb(189, 134, 105);
-    background-image: url(../src/pictures/pixel_TV.png);
-}
-
-.software_library {
-    background-color: rgb(189, 134, 105);
-    background-image: url(../src/pictures/pixel_TV.png);
-}
-
-.appointment {
-    background-color: rgb(228, 223, 170);
-    background-image: url(../src/pictures/pixel_BUS.png);
-}
-
-/*主页上标题文字动画*/
+/*主页上标题*/
 .main_title {
     position: absolute;
-    top: 30%;
-    left: 50%;
-    height: 160px;
+    top: 25vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    height: 220px;
+
+    min-width: 480px;
+
+    color: rgb(94, 141, 224);
     font-family: "SmileySans", sans-serif;
     font-size: 200px;
-    color: rgb(114, 141, 224);
+    font-weight: 600;
 }
 
-
-.main_title_container {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    font-weight: 600;
-    height: 200px;
-
+.main_title_box {
+    height: 220px;
     overflow: hidden;
 }
 
-.main_title_text_fixed {
-    display: inline;
+
+
+.main_title_fixed {
     float: right;
-    margin: 0;
+    margin: 10px 0;
     line-height: 1;
 }
 
-.main_title_text_changing {
-    margin: 0;
+.main_title_changing {
+    display: inline-block;
     float: left;
+    margin: 0;
     text-align: left;
     list-style: none;
-
+    padding-inline-start: 0;
     animation: change 5s infinite;
     animation-timing-function: ease-in-out;
 }
 
-.main_title_text_changing_item {
-    line-height: 210px;
+.main_title_changing_item {
+    line-height: 230px;
 }
 
 @keyframes change {
@@ -91,4 +134,79 @@ body {
     50%, 80% {
         transform: translate3d(0, -50%, 0);
     }
+}
+
+/*主页上的描述语句*/
+.main_info {
+    position: absolute;
+    top: 45vh;
+    left: 50vw;
+    height: 50px;
+    min-width: 260px;
+    transform: translate(-50%, -50%);
+    color: rgb(189, 134, 105);
+    font-family: "SmileySans", sans-serif;
+    font-size: 30px;
+}
+
+.main_info_box {
+    height: 40px;
+    overflow: hidden;
+}
+
+.main_info_fixed {
+    display: inline;
+    float: left;
+    margin: 0 0;
+}
+
+.main_info_changing {
+    float: right;
+    text-align: left;
+    list-style: none;
+    transition: all 0.5s ease-in-out 1s;
+}
+
+.main_info_changing:hover {
+    transform: translate3d(0, -50%, 0);
+    transition-delay: 0s;
+}
+
+
+.main_info_changing_item {
+    height: 40px;
+}
+
+/*病例部分*/
+.library {
+    position: relative;
+    background-color: rgb(189, 134, 105);
+    background-image: url(../src/pictures/pixel_TV.png);
+}
+.library_title {
+    position: absolute;
+    top: 20vh;
+    left: 8vw;
+    height: 150px;
+
+    min-width: 480px;
+    color: rgb(85, 39, 0);
+    font-family: "SmileySans", sans-serif;
+    font-size: 150px;
+}
+.library_title {
+    position: absolute;
+    top: 20vh;
+    left: 8vw;
+    height: 150px;
+
+    min-width: 480px;
+    color: rgb(85, 39, 0);
+    font-family: "SmileySans", sans-serif;
+    font-size: 150px;
+}
+/*预约维修部分*/
+.appointment {
+    background-color: rgb(228, 223, 170);
+    background-image: url(../src/pictures/pixel_BUS.png);
 }
