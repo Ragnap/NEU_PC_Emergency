@@ -2,8 +2,13 @@
 @font-face {
     font-family: SmileySans;
     src: url("../src/font/SmileySans/SmileySans-Oblique.otf.woff2") format("woff"),
-    url("../src/font/SmileySans/SmileySans-Oblique.otf") format("opentype"),
-    url("../src/font/SmileySans/SmileySans-Oblique.ttf") format("truetype");
+        url("../src/font/SmileySans/SmileySans-Oblique.otf") format("opentype"),
+        url("../src/font/SmileySans/SmileySans-Oblique.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: IPix;
+    src: url("../src/font/IPix/IPix.ttf") format("truetype");
 }
 
 /**********动画部分*************/
@@ -12,49 +17,278 @@
     text-shadow: 0 0 rgb(38, 48, 69);
     transition-duration: 0.5s;
 }
+
 .text-shadow-pop:hover {
-    text-shadow:8px 8px rgb(38, 48, 69);
+    text-shadow: 6px 6px rgb(38, 48, 69);
     transition-duration: 1s;
 }
 
 /*背景加强移动颜色*/
-.cross_highlight{
+.cross_highlight {
     position: relative;
     z-index: 1;
 }
+
 .cross_highlight::before {
     content: '';
     position: absolute;
     z-index: -1;
     top: 0;
     bottom: 0;
-    left: -0.25em;
-    right: -0.25em;
+    left: -0.3em;
+    right: -0.3em;
     background-color: rgb(189, 134, 105);
     transform-origin: center right;
     transform: scaleX(0) scaleY(0.6);
     transition: transform 0.2s ease-in-out;
 }
+
 .cross_highlight:hover::before {
     transform: scaleX(1) scaleY(0.6);
     transform-origin: center left;
 }
 
+/*改变为蓝色*/
+.hover_recolor_light_blue {
+    transition: all 0.2s ease-in-out 0s;
+}
+
+.hover_recolor_light_blue:hover {
+    color: rgb(64, 111, 224);
+    font-weight: bolder;
+}
+
+/*改变为黑色*/
+.hover_recolor_black {
+    transition: all 0.2s ease-in-out 0s;
+}
+
+.hover_recolor_black:hover {
+    color: rgb(28, 38, 39);
+    font-weight: bolder;
+}
+
+/*闪烁效果*/
+.hover_flicker:hover {
+    animation: hover_flicker 1s linear infinite;
+}
+
+@keyframes hover_flicker {
+    0% {
+        opacity: 0;
+    }
+
+    3% {
+        opacity: 1;
+        text-shadow: none;
+    }
+
+    15% {
+        opacity: 0;
+        text-shadow: none;
+    }
+
+    20% {
+        opacity: 0;
+        text-shadow: none;
+    }
+
+    20.1% {
+        opacity: 1;
+        text-shadow: 0 0 30px rgba(255, 255, 255, 0.25);
+    }
+
+    20.6% {
+        opacity: 0;
+        text-shadow: none;
+    }
+
+    30% {
+        opacity: 0;
+        text-shadow: none;
+    }
+
+    30.1% {
+        opacity: 1;
+        text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+    }
+
+    30.5% {
+        opacity: 1;
+        text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+    }
+
+    30.6% {
+        opacity: 0;
+        text-shadow: none;
+    }
+
+    45% {
+        opacity: 0;
+        text-shadow: none;
+    }
+
+    45.1% {
+        opacity: 1;
+        text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+    }
+
+    50% {
+        opacity: 1;
+        text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+    }
+
+    55% {
+        opacity: 1;
+        text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+    }
+
+    55.1% {
+        opacity: 0;
+        text-shadow: none;
+    }
+
+    57% {
+        opacity: 0;
+        text-shadow: none;
+    }
+
+    57.1% {
+        opacity: 1;
+        text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35);
+    }
+
+    60% {
+        opacity: 1;
+        text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35);
+    }
+
+    60.1% {
+        opacity: 0;
+        text-shadow: none;
+    }
+
+    65% {
+        opacity: 0;
+        text-shadow: none;
+    }
+
+    65.1% {
+        opacity: 1;
+        text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35), 0 0 100px rgba(255, 255, 255, 0.1);
+    }
+
+    75% {
+        opacity: 1;
+        text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35), 0 0 100px rgba(255, 255, 255, 0.1);
+    }
+
+    75.1% {
+        opacity: 0;
+        text-shadow: none;
+    }
+
+    77% {
+        opacity: 0;
+        text-shadow: none;
+    }
+
+    77.1% {
+        opacity: 1;
+        text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.4), 0 0 110px rgba(255, 255, 255, 0.2), 0 0 100px rgba(255, 255, 255, 0.1);
+    }
+
+    85% {
+        opacity: 1;
+        text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.4), 0 0 110px rgba(255, 255, 255, 0.2), 0 0 100px rgba(255, 255, 255, 0.1);
+    }
+
+    85.1% {
+        opacity: 0;
+        text-shadow: none;
+    }
+
+    86% {
+        opacity: 0;
+        text-shadow: none;
+    }
+
+    86.1% {
+        opacity: 1;
+        text-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25), 0 0 100px rgba(255, 255, 255, 0.1);
+    }
+
+    100% {
+        opacity: 1;
+        text-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25), 0 0 100px rgba(255, 255, 255, 0.1);
+    }
+}
+
+/* 震动效果 */
+.shake:hover {
+    animation: shake 0.5s linear infinite both;
+}
+
+@keyframes shake {
+    0% {
+        -webkit-transform: translate(0);
+        transform: translate(0);
+    }
+
+    10% {
+        -webkit-transform: translate(-2px, -2px);
+        transform: translate(-2px, -2px);
+    }
+
+    20% {
+        -webkit-transform: translate(2px, -2px);
+        transform: translate(2px, -2px);
+    }
+
+    30% {
+        -webkit-transform: translate(-2px, 2px);
+        transform: translate(-2px, 2px);
+    }
+
+    40% {
+        -webkit-transform: translate(2px, 2px);
+        transform: translate(2px, 2px);
+    }
+
+    50% {
+        -webkit-transform: translate(-2px, -2px);
+        transform: translate(-2px, -2px);
+    }
+
+    60% {
+        -webkit-transform: translate(2px, -2px);
+        transform: translate(2px, -2px);
+    }
+
+    70% {
+        -webkit-transform: translate(-2px, 2px);
+        transform: translate(-2px, 2px);
+    }
+
+    80% {
+        -webkit-transform: translate(-2px, -2px);
+        transform: translate(-2px, -2px);
+    }
+
+    90% {
+        -webkit-transform: translate(2px, -2px);
+        transform: translate(2px, -2px);
+    }
+
+    100% {
+        -webkit-transform: translate(0);
+        transform: translate(0);
+    }
+}
+
+
+
 /**********常用的字体设定********/
-/*用于标题的大号字体*/
-.huge {
-    font-size: 200px;
-}
-
-/*用于小行的描述字体*/
-.describe {
-    font-size: 25px;
-}
-
-/*用于小行的描述字体*/
-.smiley_sans {
-    font-family: "SmileySans", sans-serif;
-}
 
 /*删除线*/
 .delete_line {
@@ -65,92 +299,103 @@
 body {
     margin: 0;
     padding: 0;
+    min-width: 500px;
+}
 
+.page {
+    height: 100vh;
+    overflow-x: hidden;
+    perspective: 3px;
+    background-color: rgb(228, 223, 170);
+}
+
+.page div {
+    position: relative;
+    justify-content: center;
+    align-items: center;
 }
 
 /*基本图片*/
-.scene {
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-size: 100vw;
+.background {
+    background-size: cover;
     background-position: center;
-
+    background-repeat: no-repeat;
+    transform: translateZ(-1px) scale(1.35);
+    height: 100vh;
+    z-index: -1;
 }
-
 /*第一个图片，主图片*/
-.main {
+.main_background {
+    display: flex;
+    height: 110vh;
+
     background-color: rgb(38, 48, 69);
     background-image: url(../src/pictures/pixel_PC.png);
 }
 
-/*主页上标题*/
 .main_title {
-    position: absolute;
-    top: 25vh;
-    left: 50vw;
-    transform: translate(-50%, -50%);
-    height: 220px;
-
-    min-width: 480px;
-
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    transform: translateY(-85vh) translateZ(1px);
     color: rgb(94, 141, 224);
     font-family: "SmileySans", sans-serif;
-    font-size: 200px;
+    font-size: 150px;
     font-weight: 600;
 }
 
 .main_title_box {
-    height: 220px;
+    display: inline-block;
+    height: 170px;
     overflow: hidden;
 }
 
-
-
 .main_title_fixed {
+    display: block;
     float: right;
-    margin: 10px 0;
-    line-height: 1;
+    border-top: 0;
+    margin: 0;
 }
 
 .main_title_changing {
-    display: inline-block;
-    float: left;
+    display: block;
     margin: 0;
-    text-align: left;
+    float: left;
     list-style: none;
-    padding-inline-start: 0;
     animation: change 5s infinite;
     animation-timing-function: ease-in-out;
 }
 
 .main_title_changing_item {
-    line-height: 230px;
+    height: 170px;
 }
 
 @keyframes change {
-    0%, 30%, 100% {
+
+    0%,
+    30%,
+    100% {
         transform: translate3d(0, 0, 0);
     }
-    50%, 80% {
+
+    50%,
+    80% {
         transform: translate3d(0, -50%, 0);
     }
 }
 
-/*主页上的描述语句*/
 .main_info {
-    position: absolute;
-    top: 45vh;
-    left: 50vw;
-    height: 50px;
-    min-width: 260px;
-    transform: translate(-50%, -50%);
+    display: flex;
+    transform: translateY(-80vh) translateZ(1px);
     color: rgb(189, 134, 105);
     font-family: "SmileySans", sans-serif;
-    font-size: 30px;
+    font-size: 25px;
 }
 
 .main_info_box {
-    height: 40px;
+    position: relative;
+    display: inline-block;
+    height: 30px;
     overflow: hidden;
 }
 
@@ -172,41 +417,190 @@ body {
     transition-delay: 0s;
 }
 
-
 .main_info_changing_item {
-    height: 40px;
+    height: 30px;
 }
 
-/*病例部分*/
-.library {
-    position: relative;
+
+.library_background {
+    display: flex;
+    top: 10vh;
+    height: 110vh;
     background-color: rgb(189, 134, 105);
     background-image: url(../src/pictures/pixel_TV.png);
 }
-.library_title {
-    position: absolute;
-    top: 20vh;
-    left: 8vw;
-    height: 150px;
 
-    min-width: 480px;
+.library_title {
+    display: flex;
+    justify-content: left !important;
+    transform: translateY(-65vh) translateX(22%) translateZ(1px);
     color: rgb(85, 39, 0);
     font-family: "SmileySans", sans-serif;
-    font-size: 150px;
+    font-size: 100px;
 }
-.library_title {
-    position: absolute;
-    top: 20vh;
-    left: 8vw;
-    height: 150px;
 
-    min-width: 480px;
-    color: rgb(85, 39, 0);
-    font-family: "SmileySans", sans-serif;
-    font-size: 150px;
+.library_search {
+    display: flex;
+    justify-content: left !important;
+    transform: translateY(-62vh) translateX(22%) translateZ(1px);
+    height: 150px;
 }
+
+.library_search_box {
+    width: 25vw;
+}
+
+.library_search_info {
+    color: rgb(228, 223, 170);
+    font-family: "SmileySans", sans-serif;
+    font-size: 25px;
+}
+
+.library_search_input_box {
+    top: 2vh;
+    width: 20vw;
+}
+
+.library_search_input_box input {
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(189, 134, 105);
+    border: 2px solid rgba(220, 180, 148, 0.3);
+    border-radius: 5px;
+    outline: none;
+    color: #fff;
+    font-size: 1em;
+    transition: 0.5s;
+}
+
+.library_search_input_box span {
+    position: absolute;
+    left: 0;
+    padding: 10px;
+
+    pointer-events: none;
+    font-size: 1em;
+    color: rgba(220, 180, 148, 0.8);
+    transition: 0.2s;
+}
+
+.library_search_input_box input:valid,
+.library_search_input_box input:focus {
+    border-color: rgb(228, 223, 170);
+}
+
+.library_search_input_box input:valid~span,
+.library_search_input_box input:focus~span {
+    color: rgb(228, 223, 170);
+    transform: translateX(10px) translateY(-7px);
+    font-size: 0.65em;
+    padding: 0 10px;
+    overflow-y: hidden;
+    background-color: rgb(189, 134, 105);
+    border-left: 1px solid rgb(228, 223, 170);
+    border-right: 1px solid rgb(228, 223, 170);
+    letter-spacing: 0.1em;
+}
+
+.library_search_button {}
+
 /*预约维修部分*/
-.appointment {
+.appointment_background {
+    display: flex;
+    top: 10vh;
+    height: 100vh;
     background-color: rgb(228, 223, 170);
     background-image: url(../src/pictures/pixel_BUS.png);
+
+}
+
+.appointment_title {
+    display: flex;
+    padding-left: 1em;
+    color: rgb(155, 142, 30);
+    font-family: "SmileySans", sans-serif;
+    font-size: 100px;
+}
+
+.appointment_book {
+    display: flex;
+    flex-direction: column;
+    transform: translateY(-50vh) translateX(10%) translateZ(1px);
+    height: 150px;
+}
+
+.appointment_book_info_box {
+    margin-top: 2em;
+}
+
+.appointment_book_info {
+    color: rgb(155, 142, 30);
+    height: 1.5em;
+    font-family: "SmileySans", sans-serif;
+    font-size: 2em;
+}
+
+.appointment_book_button_box {
+    margin-top: 2.5em;
+    display: flex;
+    justify-content: center;
+}
+
+.appointment_book_button {
+    z-index: 1;
+    position: relative;
+    font-family: "SmileySans", sans-serif;
+    font-size: 30px;
+    color:rgb(228, 223, 170);
+    padding: 0.3em 1em;
+    border: 0;
+    outline: none;
+    background-color: rgb(155, 142, 30);
+    transition: all 0.25s ease-in-out;
+}
+
+
+.appointment_book_button::before {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(228, 223, 170);
+    transform-origin: center left;
+    transform: scaleX(0);
+    transition: transform 0.2s ease-in-out;
+}
+
+.appointment_book_button:hover {
+    color: rgb(155, 142, 30);
+    cursor: pointer;
+    padding: 0.3em 0.5em;
+    transform: translateX(0.5em);
+}
+
+.appointment_book_button:hover::before {
+    transform-origin: center left;
+    transform: scaleX(1);
+}
+.appointment_book_button_pointer{
+    width: 0;
+    height: 0;
+    border-top: 1em solid transparent;
+    border-bottom: 1em solid transparent;
+    border-left: 1em solid rgb(228, 223, 170);
+    transform: translateX(-0.5em);
+    transition: all 0.25s ease-in-out;
+}
+.appointment_book_button:hover~span{
+    border-left: 1em solid rgb(155, 142, 30);
+    transform: translateX(1em);
+}
+
+/*底部玩梗台词*/
+.funny_tips {
+    font-family: "IPix";
+    font-size: 5em;
 }
