@@ -1,14 +1,14 @@
 /*字体导入*/
 @font-face {
     font-family: SmileySans;
-    src: url("../src/font/SmileySans/SmileySans-Oblique.otf.woff2") format("woff"),
-        url("../src/font/SmileySans/SmileySans-Oblique.otf") format("opentype"),
-        url("../src/font/SmileySans/SmileySans-Oblique.ttf") format("truetype");
+    resourse: url("../resourse/font/SmileySans/SmileySans-Oblique.otf.woff2") format("woff"),
+        url("../resourse/font/SmileySans/SmileySans-Oblique.otf") format("opentype"),
+        url("../resourse/font/SmileySans/SmileySans-Oblique.ttf") format("truetype");
 }
 
 @font-face {
     font-family: IPix;
-    src: url("../src/font/IPix/IPix.ttf") format("truetype");
+    resourse: url("../resourse/font/IPix/IPix.ttf") format("truetype");
 }
 
 /**********动画部分*************/
@@ -330,7 +330,7 @@ body {
     height: 110vh;
 
     background-color: rgb(38, 48, 69);
-    background-image: url(../src/pictures/pixel_PC.png);
+    background-image: url(../resourse/pictures/pixel_PC.png);
 }
 
 .main_title {
@@ -427,7 +427,7 @@ body {
     top: 10vh;
     height: 110vh;
     background-color: rgb(189, 134, 105);
-    background-image: url(../src/pictures/pixel_TV.png);
+    background-image: url(../resourse/pictures/pixel_TV.png);
 }
 
 .library_title {
@@ -510,7 +510,7 @@ body {
     top: 10vh;
     height: 100vh;
     background-color: rgb(228, 223, 170);
-    background-image: url(../src/pictures/pixel_BUS.png);
+    background-image: url(../resourse/pictures/pixel_BUS.png);
 
 }
 

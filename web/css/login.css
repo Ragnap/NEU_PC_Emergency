@@ -11,7 +11,7 @@ body {
     justify-content: center;
     align-items: center;
     /*background-color: rgb(38, 53, 69);*/
-    background-image: url(../src/pictures/starry_sky.png);
+    background-image: url(../resourse/pictures/starry_sky.png);
     background-position: center;
 }
 
@@ -76,6 +76,12 @@ body {
 }
 
 .bottom>div {
+
+}
+.bottom>div h2 {
+    color: rgb(243, 205, 192);
+}
+.bottom>div form{
     width: 100%;
     height: 100%;
     display: flex;
@@ -83,11 +89,7 @@ body {
     align-items: center;
     justify-content: space-evenly;
 }
-
-.bottom>div h2 {
-    color: rgb(243, 205, 192);
-}
-.bottom>div input{
+.bottom>div form input{
     width: 200px;
     height: 38px;
     padding:0 8px;
@@ -95,10 +97,10 @@ body {
     background-color: rgb(99, 133, 142);
     color: rgb(243, 205, 192);
 }
-.bottom>div input::placeholder{
+.bottom>div form input::placeholder{
     color: rgb(165, 180, 176);
 }
-.bottom>div button{
+.bottom>div form button{
     width: 80px;
     height: 30px;
     color: #333;
@@ -110,7 +112,7 @@ body {
     cursor: pointer;
     box-shadow:0 0 10px rgb(233, 195, 182);
 }
-.bottom>div button:hover{
+.bottom>div form button:hover{
 
 }
 .sign_in {
@@ -119,8 +121,6 @@ body {
 }
 
 .sign_up {
-    position: absolute;
-    top: 0;
-    transform: translateZ(-70px) rotateY(180deg);
+    transform: translateY(-100%) translateZ(-70px) rotateY(180deg);
     /* 我们给反面加上距离的时候，前往不要忘记给反面的内容也翻转一下，否则就会出现这种卡片转过来了，里面的内容也反了 */
 }

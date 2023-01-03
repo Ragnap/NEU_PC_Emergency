@@ -9,6 +9,7 @@
         </element>
       </element>
       <element id="javaee-facet-resources" facet="PC_Emergency/web/Web" />
+      <element id="module-source" name="PC_Emergency" />
     </root>
   </artifact>
 </component>
