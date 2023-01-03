@@ -516,7 +516,7 @@ body {
 
 .appointment_title {
     display: flex;
-    padding-left: 1em;
+    padding-left: 0.5em;
     color: rgb(155, 142, 30);
     font-family: "SmileySans", sans-serif;
     font-size: 100px;
@@ -525,7 +525,7 @@ body {
 .appointment_book {
     display: flex;
     flex-direction: column;
-    transform: translateY(-50vh) translateX(10%) translateZ(1px);
+    transform: translateY(-50vh) translateX(13%) translateZ(1px);
     height: 150px;
 }
 

@@ -1,0 +1,126 @@
+* {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*background-color: rgb(38, 53, 69);*/
+    background-image: url(../src/pictures/starry_sky.png);
+    background-position: center;
+}
+
+.shell {
+    width: 300px;
+    height: 485px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    perspective: 1000px;
+    /* 给最外层加上一个透视，否则接下去的翻转会没有3d的效果 */
+}
+
+.top {
+    width: 300px;
+    display: flex;
+    cursor: pointer;
+    justify-content: space-evenly;
+}
+
+.off,
+.on {
+    color: rgb(233, 195, 182);
+    transition: .5s;
+    font: 300 20px '';
+    text-shadow:0 0 2px rgb(233, 195, 182);
+}
+.on{
+    opacity: .5;
+}
+.button {
+    width: 60px;
+    height: 25px;
+    background-color: rgb(233, 195, 182);
+    border-radius: 20px;
+    position: relative;
+}
+
+.ball {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: rgb(44, 64, 69);
+    border-radius: 50%;
+    transition: .5s;
+    box-shadow: 0 0 10px #000;
+    left: 0;
+    transform: translate(-1px);
+}
+
+.bottom {
+    width: 300px;
+    height: 350px;
+    background-color: rgb(8, 53, 64);
+    transform-style: preserve-3d;
+    /* 使元素呈现出3D效果 */
+    position: relative;
+    transition: .7s;
+    border-radius: 5px;
+    box-shadow: 0 0 20px #000;
+}
+
+.bottom>div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.bottom>div h2 {
+    color: rgb(243, 205, 192);
+}
+.bottom>div input{
+    width: 200px;
+    height: 38px;
+    padding:0 8px;
+    border-radius: 4px;
+    background-color: rgb(99, 133, 142);
+    color: rgb(243, 205, 192);
+}
+.bottom>div input::placeholder{
+    color: rgb(165, 180, 176);
+}
+.bottom>div button{
+    width: 80px;
+    height: 30px;
+    color: #333;
+    font-size: 15px;
+    background-color: rgb(233, 195, 182);
+    border-radius: 4px;
+    transition: .3s;
+    margin-bottom: 10px;
+    cursor: pointer;
+    box-shadow:0 0 10px rgb(233, 195, 182);
+}
+.bottom>div button:hover{
+
+}
+.sign_in {
+    transform: translateZ(70px);
+    /* 在这里我们将卡片里面内容和卡片有一个距离，这样子会更有立体感 */
+}
+
+.sign_up {
+    position: absolute;
+    top: 0;
+    transform: translateZ(-70px) rotateY(180deg);
+    /* 我们给反面加上距离的时候，前往不要忘记给反面的内容也翻转一下，否则就会出现这种卡片转过来了，里面的内容也反了 */
+}

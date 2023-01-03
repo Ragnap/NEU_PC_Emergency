@@ -25,3 +25,8 @@ Tomcat 8.5.82
 
 [handpaint_Macbook.jpg](https://www.pixiv.net/artworks/99648434)
 
+[pixel_box.jpg](https://www.pixiv.net/artworks/101395243)
+
+[medical.png](https://www.pixiv.net/artworks/91683595)
+
+[starry_sky.jpg](https://www.pixiv.net/artworks/104213674)
