@@ -8,7 +8,7 @@
 </head>
 
 <body>
-
+<div class="background"></div>
 <div class="shell">
     <div class="top">
         <span class="off">登录</span>
@@ -42,6 +42,7 @@
 </div>
 </body>
 
+
 <%--弹出servlet对应的反馈信息--%>
 <%
     String message = (String) request.getSession().getAttribute("user_message");
@@ -53,8 +54,20 @@
 </script>
 <%}%>
 
-
-<%--旋转动画对应的脚本--%>
+<%--背景视差效果--%>
+<script>
+    let background = document.querySelector('.background')
+    // 设置鼠标移动时触发的效果
+    document.addEventListener('mousemove',e=>{
+        // 获取鼠标的位置
+        let mouseX = e.clientX
+        let mouseY = e.clientY
+        let delta_x = (mouseX-background.offsetLeft)/20
+        let delta_y = (mouseY-background.offsetTop)/20
+        background.style.transform = "translate("+delta_x+"px,"+delta_y+"px)";
+    })
+</script>
+<%--旋转动画--%>
 <script>
     // 每当点击按钮的时候，index的值就会发生变化，如果index为0的话，那么点击的时候index变为1，反之变为0
     // 当index的值为0时，按钮里的球划到右边，并且将右边字的透明度变为1，下面的登录卡旋转180度，为注册
@@ -83,7 +96,7 @@
         })
 </script>
 
-<%--密码验证的脚本--%>
+<%--密码验证--%>
 <script>
     // 登录验证
     let sign_in_username = document.getElementById("sign_in_username");

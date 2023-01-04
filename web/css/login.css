@@ -10,11 +10,17 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
     /*background-color: rgb(38, 53, 69);*/
+}
+.background{
+    position: absolute;
+    height: 120%;
+    width: 120%;
+
     background-image: url(../resourse/pictures/starry_sky.png);
     background-position: center;
 }
-
 .shell {
     width: 300px;
     height: 485px;

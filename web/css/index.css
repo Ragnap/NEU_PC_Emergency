@@ -299,11 +299,95 @@ body {
     min-width: 500px;
 }
 
+header {
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    align-items: center;
+    transition: 0.5s;
+    padding: 30px 0px;
+    z-index: 10;
+}
+
+header ul{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .nav_box{
+    margin-left: 10px;
+    float: left;
+    transition: 0.5s;
+}
+header .account_box{
+    margin-right: 20px;
+    float: right;
+    transition: 0.5s;
+}
+header ul li {
+    position: relative;
+    list-style: none;
+    
+    margin: 0 10px;
+    padding: 5px 5px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+header ul li a{
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    color: rgb(94, 141, 224);
+    letter-spacing: 2px;
+    font-weight: 700;
+    transition: 1s;
+}
+/* 对应的三种配色 */
+header.default .nav_box{
+    margin-left: 100px !important;
+}
+header.default .account_box{
+    margin-right: 150px !important;
+}
+header.main_color{
+    padding: 2px 0;
+    background-color: rgba(38, 48, 69,0.5);
+}
+header.main_color ul li{
+    background-color: rgba(38, 48, 69,0.8);
+}
+header.library_color{
+    padding: 2px 0;
+    background-color: rgba(169, 114, 85,0.5);
+}
+header.library_color ul li{
+    background-color: rgba(169, 114, 85,0.8);
+}
+header.library_color ul li a{
+    color: rgba(228, 223, 170,0.8);
+}
+header.appointment_color{
+    padding: 2px 0;
+    background-color: rgba(224, 210, 84,0.5);
+}
+header.appointment_color ul li{
+    background-color: rgba(224, 210, 84,0.8);
+}
+header.appointment_color ul li a{
+    color: rgba(143, 78, 23,0.8);
+}
+
+
 .page {
     height: 100vh;
     overflow-x: hidden;
     perspective: 3px;
     background-color: rgb(228, 223, 170);
+}
+.page::-webkit-scrollbar{
+    display: none;
 }
 
 .page div {
@@ -406,7 +490,7 @@ body {
     float: right;
     text-align: left;
     list-style: none;
-    transition: all 0.5s ease-in-out 1s;
+    transition: transform 0.5s ease-in-out 1s;
 }
 
 .main_info_changing:hover {

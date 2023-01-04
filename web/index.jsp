@@ -11,10 +11,17 @@
 
 <body>
     <!-- 导航栏  -->
-    <div class="nav">
-
-    </div>
-
+    <header class="default">
+        <ul class="nav_box">
+            <li><a href="">首页</a></li>
+            <li><a href="">故障诊断</a></li>
+            <li><a href="">维修预约</a></li>
+        </ul>
+        <ul class="account_box">
+            <li><a href="${pageContext.request.contextPath}/login.jsp">登录</a></li>
+            <li><a href="${pageContext.request.contextPath}/login.jsp">注册</a></li>
+        </ul>
+    </header>
     <!-- 页面 -->
     <div class="page">
         <!-- 主界面 -->
@@ -95,5 +102,20 @@
 
     </div> -->
 </body>
-
+<!-- 导航栏变色效果 -->
+<script type="text/javascript">
+    let page=document.querySelector(".page")
+    page.onscroll= function(){
+        let header = document.querySelector("header");
+        
+        let main_background = document.querySelector(".main_background");
+        let library_background = document.querySelector(".library_background");
+        let appointment_background = document.querySelector(".appointment_background");
+        // console.log(main_background.getBoundingClientRect().top,library_background.getBoundingClientRect().top,appointment_background.getBoundingClientRect().top);
+        header.classList.toggle("default",main_background.getBoundingClientRect().top>-50);
+        header.classList.toggle("main_color",main_background.getBoundingClientRect().top<-50&&main_background.getBoundingClientRect().bottom>20);
+        header.classList.toggle("library_color",library_background.getBoundingClientRect().top<0&&library_background.getBoundingClientRect().bottom>20);
+        header.classList.toggle("appointment_color",appointment_background.getBoundingClientRect().top<0&&appointment_background.getBoundingClientRect().bottom>10);
+    }
+</script>
 </html>
