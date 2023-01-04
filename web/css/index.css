@@ -1,14 +1,11 @@
 /*字体导入*/
-@font-face {
-    font-family: SmileySans;
-    resourse: url("../resourse/font/SmileySans/SmileySans-Oblique.otf.woff2") format("woff"),
-        url("../resourse/font/SmileySans/SmileySans-Oblique.otf") format("opentype"),
-        url("../resourse/font/SmileySans/SmileySans-Oblique.ttf") format("truetype");
-}
 
 @font-face {
-    font-family: IPix;
-    resourse: url("../resourse/font/IPix/IPix.ttf") format("truetype");
+    font-family: SmileySans;
+    src:url('../resourse/font/SmileySans/SmileySans-Oblique.ttf.woff2') format('woff'),
+        url('../resourse/font/SmileySans/SmileySans-Oblique.otf.woff2')  format('woff'),
+        url('../resourse/font/SmileySans/SmileySans-Oblique.ttf') format('truetype'),
+        url('../resourse/font/SmileySans/SmileySans-Oblique.otf') format('opentype');
 }
 
 /**********动画部分*************/
@@ -597,10 +594,4 @@ body {
 .appointment_book_button:hover~span{
     border-left: 1em solid rgb(155, 142, 30);
     transform: translateX(1em);
-}
-
-/*底部玩梗台词*/
-.funny_tips {
-    font-family: "IPix";
-    font-size: 5em;
 }
