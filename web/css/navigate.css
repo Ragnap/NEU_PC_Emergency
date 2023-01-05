@@ -11,6 +11,9 @@ header {
     overflow: hidden;
     white-space: nowrap;
 }
+header span{
+    pointer-events: none;
+}
 
 header ul {
     position: relative;
@@ -20,29 +23,38 @@ header ul {
 }
 
 header .nav_box {
-
     margin-left: 10px;
     float: left;
     transition: 0.5s;
 }
 
 header .account_box {
-    margin-right: 20px;
+    margin-right: 5em;
     float: right;
     transition: 0.5s;
 }
 
-header ul li {
+header ul li
+{
     position: relative;
     list-style: none;
-
     margin: 0 10px;
     padding: 5px 5px;
     border-radius: 10px;
     transition: 0.5s;
 }
-
-header ul li a {
+header div{
+    position: relative;
+    margin: 1em 10px;
+    padding: 5px 1em;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+header div.account_box{
+    background: rgba(0,0,0,0) !important;
+}
+header ul li a
+{
     position: relative;
     margin: 0 15px;
     text-decoration: none;
@@ -51,14 +63,21 @@ header ul li a {
     font-weight: 700;
     transition: 1s;
 }
-
+header div span{
+    position: relative;
+    text-decoration: none;
+    margin: 0;
+    color: rgb(94, 141, 224);
+    font-weight: 700;
+    transition: 1s;
+}
 /* 对应的三种配色 */
 header.default .nav_box {
     margin-left: 10% !important;
 }
 
 header.default .account_box {
-    margin-right: 15% !important;
+    margin-right: 18% !important;
 }
 
 header.main_color {
@@ -66,7 +85,8 @@ header.main_color {
     background-color: rgba(38, 48, 69, 0.5);
 }
 
-header.main_color ul li {
+header.main_color ul li,
+header.main_color div{
     background-color: rgba(38, 48, 69, 0.8);
 }
 
@@ -75,11 +95,13 @@ header.library_color {
     background-color: rgba(169, 114, 85, 0.5);
 }
 
-header.library_color ul li {
+header.library_color ul li,
+header.library_color div{
     background-color: rgba(169, 114, 85, 0.8);
 }
 
-header.library_color ul li a {
+header.library_color ul li a,
+header.library_color div span{
     color: rgba(228, 223, 170, 0.8);
 }
 
@@ -88,11 +110,13 @@ header.appointment_color {
     background-color: rgba(224, 210, 84, 0.5);
 }
 
-header.appointment_color ul li {
+header.appointment_color ul li,
+header.appointment_color div{
     background-color: rgba(224, 210, 84, 0.8);
 }
 
-header.appointment_color ul li a {
+header.appointment_color ul li a,
+header.appointment_color div span{
     color: rgba(143, 78, 23, 0.8);
 }
 

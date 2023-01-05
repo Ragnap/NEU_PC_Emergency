@@ -306,8 +306,11 @@ body {
     position: relative;
     justify-content: center;
     align-items: center;
+    cursor:default;
 }
-
+.page span{
+    cursor:default;
+}
 /*基本图片*/
 .background {
     background-size: cover;
@@ -455,6 +458,7 @@ body {
 }
 
 .library_search_input_box input {
+    position: absolute;
     width: 100%;
     padding: 10px;
     background-color: rgb(189, 134, 105);
@@ -470,7 +474,6 @@ body {
     position: absolute;
     left: 0;
     padding: 10px;
-
     pointer-events: none;
     font-size: 1em;
     color: rgba(220, 180, 148, 0.8);

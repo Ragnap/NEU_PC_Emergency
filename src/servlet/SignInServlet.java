@@ -38,8 +38,7 @@ public class SignInServlet extends HttpServlet {
                 resp.sendRedirect("login.jsp");
 //                out.println("<a href=\"javascript:history.back(-1)\">返回登录</a>");
             } else {
-                req.getSession().setAttribute("user_message", "欢迎登录!");
-                req.getSession().setAttribute("User", userdata);
+                req.getSession().setAttribute("current_user", userdata);
                 resp.sendRedirect("index.jsp");
 //                req.getRequestDispatcher("homepage.html").forward(req, resp);
             }
