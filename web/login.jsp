@@ -6,7 +6,7 @@
     <link rel="stylesheet" type="text/css" href="./css/fonts.css">
     <link rel="stylesheet" type="text/css" href="./css/login.css">
     <link rel="stylesheet" type="text/css" href="./css/navigate.css">
-    <title>机诊室 | 用户</title>
+    <title>机诊科 | 用户</title>
 </head>
 
 <body>

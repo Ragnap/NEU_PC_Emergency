@@ -11,7 +11,8 @@ header {
     overflow: hidden;
     white-space: nowrap;
 }
-header span{
+
+header span {
     pointer-events: none;
 }
 
@@ -34,8 +35,7 @@ header .account_box {
     transition: 0.5s;
 }
 
-header ul li
-{
+header ul li {
     position: relative;
     list-style: none;
     margin: 0 10px;
@@ -43,35 +43,53 @@ header ul li
     border-radius: 10px;
     transition: 0.5s;
 }
-header div{
+
+header div {
     position: relative;
     margin: 1em 10px;
     padding: 5px 1em;
     border-radius: 10px;
     transition: 0.5s;
 }
-header div.account_box{
-    background: rgba(0,0,0,0) !important;
+
+header div.account_box {
+    background: rgba(0, 0, 0, 0) !important;
 }
-header ul li a
-{
+
+header ul li a {
     position: relative;
     margin: 0 15px;
     text-decoration: none;
-    color: rgb(94, 141, 224);
+
     letter-spacing: 2px;
     font-weight: 700;
     transition: 1s;
 }
-header div span{
+
+header div span {
     position: relative;
     text-decoration: none;
     margin: 0;
-    color: rgb(94, 141, 224);
     font-weight: 700;
     transition: 1s;
 }
-/* 对应的三种配色 */
+
+
+/*首页配色*/
+header.default {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+header.default ul li,
+header.default div {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+header.default ul li a,
+header.default div span {
+    color: rgb(94, 141, 224);
+}
+
 header.default .nav_box {
     margin-left: 10% !important;
 }
@@ -80,48 +98,88 @@ header.default .account_box {
     margin-right: 18% !important;
 }
 
+/*标题封面配色*/
 header.main_color {
     padding: 2px 0;
     background-color: rgba(38, 48, 69, 0.5);
 }
 
 header.main_color ul li,
-header.main_color div{
+header.main_color div {
     background-color: rgba(38, 48, 69, 0.8);
 }
 
+header.main_color ul li a,
+header.main_color div span {
+    color: rgb(94, 141, 224);
+}
+
+/*主页搜索配色*/
 header.library_color {
     padding: 2px 0;
     background-color: rgba(169, 114, 85, 0.5);
 }
 
 header.library_color ul li,
-header.library_color div{
+header.library_color div {
     background-color: rgba(169, 114, 85, 0.8);
 }
 
 header.library_color ul li a,
-header.library_color div span{
+header.library_color div span {
     color: rgba(228, 223, 170, 0.8);
 }
 
+/*主页预约配色*/
 header.appointment_color {
     padding: 2px 0;
     background-color: rgba(224, 210, 84, 0.5);
 }
 
 header.appointment_color ul li,
-header.appointment_color div{
+header.appointment_color div {
     background-color: rgba(224, 210, 84, 0.8);
 }
 
 header.appointment_color ul li a,
-header.appointment_color div span{
+header.appointment_color div span {
     color: rgba(143, 78, 23, 0.8);
 }
 
+/*搜索界面配色*/
+header.search_color {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+header.search_color ul li,
+header.search_color div {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+header.search_color ul li a,
+header.search_color div span {
+    color: rgba(255, 255, 255, 0.65);
+}
+
+header.search_color .nav_box {
+    margin-left: 10% !important;
+}
+
+header.search_color .account_box {
+    margin-right: 18% !important;
+}
+
+/*登录界面配色*/
 header.login_color {
-    background-color: rgba(0, 0 ,0,0);
+    background-color: rgba(0, 0, 0, 0);
+}
+
+header.login_color ul li {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+header.login_color ul li a {
+    color: rgba(213, 175, 162, 0.8);
 }
 
 header.login_color .nav_box {
@@ -130,10 +188,4 @@ header.login_color .nav_box {
 
 header.login_color .account_box {
     margin-right: 15% !important;
-}
-header.login_color ul li{
-    background-color: rgba(0, 0, 0 , 0);
-}
-header.login_color ul li a{
-    color: rgba(213, 175, 162, 0.8);
 }

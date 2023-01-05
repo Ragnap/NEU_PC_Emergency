@@ -1,17 +1,17 @@
 package model;
 
-public class Userdata {
+public class UserData {
     private Integer id;
     private String username;
     private String password;
 
-    public Userdata(Integer id, String username, String password) {
+    public UserData(Integer id, String username, String password) {
         this.id = id;
         this.username = username;
         this.password = password;
     }
 
-    public Userdata(String username, String password) {
+    public UserData(String username, String password) {
         this.username = username;
         this.password = password;
     }

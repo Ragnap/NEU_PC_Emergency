@@ -1,8 +1,6 @@
 package servlet;
 
-import database.Database;
 import database.UserDB;
-import model.Userdata;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

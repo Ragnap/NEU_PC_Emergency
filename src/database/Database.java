@@ -1,9 +1,6 @@
 package database;
 
-import model.Userdata;
-
 import java.sql.*;
-import java.util.ArrayList;
 
 public class Database {
     Connection connection = null;

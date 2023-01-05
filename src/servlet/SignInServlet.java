@@ -1,7 +1,7 @@
 package servlet;
 
 import database.UserDB;
-import model.Userdata;
+import model.UserData;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -28,7 +28,7 @@ public class SignInServlet extends HttpServlet {
 
         try {
             UserDB userDB = new UserDB();
-            Userdata userdata = userDB.login(username, password);
+            UserData userdata = userDB.login(username, password);
             if (userdata == null) {
                 //如果存在该用户则密码错误
                 if(userDB.existUser(username))

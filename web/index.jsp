@@ -1,4 +1,4 @@
-<%@ page import="model.Userdata" %>
+<%@ page import="model.UserData" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
 
 <!DOCTYPE html>
@@ -7,6 +7,7 @@
 <head>
     <link rel="stylesheet" type="text/css" href="./css/fonts.css">
     <link rel="stylesheet" type="text/css" href="./css/index.css">
+    <link rel="stylesheet" type="text/css" href="./css/animation.css">
     <link rel="stylesheet" type="text/css" href="./css/navigate.css">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>机诊科</title>
@@ -17,12 +18,12 @@
 <header class="default">
     <ul class="nav_box">
         <li><a href="#">首页</a></li>
-        <li><a href="">故障诊断</a></li>
+        <li><a href="search.jsp">故障诊断</a></li>
         <li><a href="">维修预约</a></li>
     </ul>
     <%--未登录则显示登录注册栏--%>
     <%
-        Userdata current_user = (Userdata) request.getSession().getAttribute("current_user");
+        UserData current_user = (UserData) request.getSession().getAttribute("current_user");
         if (current_user == null) {%>
     <ul class="account_box">
         <li><a href="${pageContext.request.contextPath}/login.jsp">登录</a></li>

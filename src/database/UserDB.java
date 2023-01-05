@@ -1,11 +1,10 @@
 package database;
 
-import model.Userdata;
+import model.UserData;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
 
 public class UserDB extends Database{
 
@@ -27,7 +26,7 @@ public class UserDB extends Database{
     /**
      * 查找所有用户
      */
-    public Userdata findUser(String username) throws SQLException {
+    public UserData findUser(String username) throws SQLException {
         PreparedStatement prep = connection.prepareStatement("select * from web.user where username=?");
         prep.setString(1, username);
         prep.execute();
@@ -35,7 +34,7 @@ public class UserDB extends Database{
         if (resultSet.next()) {
             int id = resultSet.getInt("id");
             String password = resultSet.getString("password");
-            return new Userdata(id, username, password);
+            return new UserData(id, username, password);
         }
         else
             return null;
@@ -55,13 +54,13 @@ public class UserDB extends Database{
     /**
      * 检查用户名与给定密码是否匹配，不存在该用户时返回null
      */
-    public Userdata login(String username,String password) throws SQLException {
+    public UserData login(String username, String password) throws SQLException {
         PreparedStatement prep = connection.prepareStatement("select * from web.user where username=?");
         prep.setString(1, username);
         prep.execute();
         ResultSet resultSet = prep.executeQuery();
         if(resultSet.next() && password.equals(resultSet.getString("password")))
-            return new Userdata(resultSet.getInt("id"), resultSet.getString("username"), resultSet.getString("password"));
+            return new UserData(resultSet.getInt("id"), resultSet.getString("username"), resultSet.getString("password"));
         else
             return null;
     }
