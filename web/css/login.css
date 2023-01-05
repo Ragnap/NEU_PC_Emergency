@@ -1,11 +1,10 @@
-* {
+*{
+    border:none;
+    outline: none;
+}
+body {
     padding: 0;
     margin: 0;
-    outline: none;
-    border: none;
-}
-
-body {
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -14,6 +13,8 @@ body {
     /*background-color: rgb(38, 53, 69);*/
 }
 .background{
+    padding: 0;
+    margin: 0;
     position: absolute;
     height: 120%;
     width: 120%;
@@ -81,10 +82,10 @@ body {
     box-shadow: 0 0 20px #000;
 }
 
-.bottom>div {
-
-}
-.bottom>div h2 {
+.bottom>div .subtitle {
+    font-family: "SmileySans", sans-serif;
+    font-size: 30px;
+    letter-spacing: 1px;
     color: rgb(243, 205, 192);
 }
 .bottom>div form{
@@ -94,6 +95,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    margin: 0;
 }
 .bottom>div form input{
     width: 200px;
@@ -110,13 +112,17 @@ body {
     width: 80px;
     height: 30px;
     color: #333;
-    font-size: 15px;
+
     background-color: rgb(233, 195, 182);
     border-radius: 4px;
     transition: .3s;
     margin-bottom: 10px;
     cursor: pointer;
     box-shadow:0 0 10px rgb(233, 195, 182);
+    font-family: "SmileySans", sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 2px;
 }
 .bottom>div form button:hover{
 

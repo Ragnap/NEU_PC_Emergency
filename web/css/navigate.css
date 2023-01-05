@@ -1,0 +1,115 @@
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    align-items: center;
+    transition: 0.5s;
+    padding: 30px 0px;
+    z-index: 10;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+header ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .nav_box {
+
+    margin-left: 10px;
+    float: left;
+    transition: 0.5s;
+}
+
+header .account_box {
+    margin-right: 20px;
+    float: right;
+    transition: 0.5s;
+}
+
+header ul li {
+    position: relative;
+    list-style: none;
+
+    margin: 0 10px;
+    padding: 5px 5px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+header ul li a {
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    color: rgb(94, 141, 224);
+    letter-spacing: 2px;
+    font-weight: 700;
+    transition: 1s;
+}
+
+/* 对应的三种配色 */
+header.default .nav_box {
+    margin-left: 10% !important;
+}
+
+header.default .account_box {
+    margin-right: 15% !important;
+}
+
+header.main_color {
+    padding: 2px 0;
+    background-color: rgba(38, 48, 69, 0.5);
+}
+
+header.main_color ul li {
+    background-color: rgba(38, 48, 69, 0.8);
+}
+
+header.library_color {
+    padding: 2px 0;
+    background-color: rgba(169, 114, 85, 0.5);
+}
+
+header.library_color ul li {
+    background-color: rgba(169, 114, 85, 0.8);
+}
+
+header.library_color ul li a {
+    color: rgba(228, 223, 170, 0.8);
+}
+
+header.appointment_color {
+    padding: 2px 0;
+    background-color: rgba(224, 210, 84, 0.5);
+}
+
+header.appointment_color ul li {
+    background-color: rgba(224, 210, 84, 0.8);
+}
+
+header.appointment_color ul li a {
+    color: rgba(143, 78, 23, 0.8);
+}
+
+header.login_color {
+    background-color: rgba(0, 0 ,0,0);
+}
+
+header.login_color .nav_box {
+    margin-left: 10% !important;
+}
+
+header.login_color .account_box {
+    margin-right: 15% !important;
+}
+header.login_color ul li{
+    background-color: rgba(0, 0, 0 , 0);
+}
+header.login_color ul li a{
+    color: rgba(213, 175, 162, 0.8);
+}

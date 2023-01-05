@@ -4,7 +4,9 @@
 <html>
 
 <head>
+    <link rel="stylesheet" type="text/css" href="./css/fonts.css">
     <link rel="stylesheet" type="text/css" href="./css/index.css">
+    <link rel="stylesheet" type="text/css" href="./css/navigate.css">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>机诊科</title>
 </head>
@@ -13,7 +15,7 @@
     <!-- 导航栏  -->
     <header class="default">
         <ul class="nav_box">
-            <li><a href="">首页</a></li>
+            <li><a href="#">首页</a></li>
             <li><a href="">故障诊断</a></li>
             <li><a href="">维修预约</a></li>
         </ul>

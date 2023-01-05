@@ -3,11 +3,23 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" type="text/css" href="./css/fonts.css">
     <link rel="stylesheet" type="text/css" href="./css/login.css">
-    <title>机诊室|用户</title>
+    <link rel="stylesheet" type="text/css" href="./css/navigate.css">
+    <title>机诊室 | 用户</title>
 </head>
 
 <body>
+<!-- 导航栏  -->
+<header class="login_color">
+    <ul class="nav_box">
+        <li><a href="index.jsp">首页</a></li>
+        <li><a href="">故障诊断</a></li>
+        <li><a href="">维修预约</a></li>
+    </ul>
+    <ul class="account_box">
+    </ul>
+</header>
 <div class="background"></div>
 <div class="shell">
     <div class="top">
@@ -21,7 +33,7 @@
     <div class="bottom">
         <div class="sign_in">
             <form method="post" action="./sign_in">
-                <h2>Sign in</h2>
+                <span class="subtitle">Sign in</span>
                 <input id="sign_in_username" type="text" name="username" placeholder="用户名">
                 <input id="sign_in_password" type="password" name="password" placeholder="密码">
                 <button id="sign_in_btn">GO</button>
@@ -30,7 +42,7 @@
 
         <div class="sign_up">
             <form method="post" action="./sign_up">
-                <h2>Sign up</h2>
+                <span class="subtitle">Sign up</span>
                 <input id="sign_up_username" type="text" name="username" placeholder="用户名">
                 <input id="sign_up_password" type="password" name="password" placeholder="密码">
                 <input id="sign_up_check_password" type="password" name="check_password" placeholder="确认密码">
@@ -58,13 +70,13 @@
 <script>
     let background = document.querySelector('.background')
     // 设置鼠标移动时触发的效果
-    document.addEventListener('mousemove',e=>{
+    document.addEventListener('mousemove', e => {
         // 获取鼠标的位置
         let mouseX = e.clientX
         let mouseY = e.clientY
-        let delta_x = (mouseX-background.offsetLeft)/20
-        let delta_y = (mouseY-background.offsetTop)/20
-        background.style.transform = "translate("+delta_x+"px,"+delta_y+"px)";
+        let delta_x = (mouseX - background.offsetLeft) / 20
+        let delta_y = (mouseY - background.offsetTop) / 20
+        background.style.transform = "translate(" + delta_x + "px," + delta_y + "px)";
     })
 </script>
 <%--旋转动画--%>
@@ -79,21 +91,21 @@
     let on = document.querySelector('.on')
     let index = 0
 
-        button.addEventListener('click', () => {
-            if (index === 0) {
-                index = 1
-                ball.style.left = 61 + '%'
-                on.style.opacity = 1
-                off.style.opacity = 0.5
-                bottom.style.transform = "rotateY(180deg)"
-            } else {
-                index = 0
-                ball.style.left = 0
-                on.style.opacity = .5
-                off.style.opacity = 1
-                bottom.style.transform = "rotateY(0deg)"
-            }
-        })
+    button.addEventListener('click', () => {
+        if (index === 0) {
+            index = 1
+            ball.style.left = 61 + '%'
+            on.style.opacity = 1
+            off.style.opacity = 0.5
+            bottom.style.transform = "rotateY(180deg)"
+        } else {
+            index = 0
+            ball.style.left = 0
+            on.style.opacity = .5
+            off.style.opacity = 1
+            bottom.style.transform = "rotateY(0deg)"
+        }
+    })
 </script>
 
 <%--密码验证--%>

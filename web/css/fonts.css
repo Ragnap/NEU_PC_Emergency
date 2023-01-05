@@ -1,0 +1,8 @@
+/*字体导入*/
+@font-face {
+    font-family: SmileySans;
+    src:url('../resourse/font/SmileySans/SmileySans-Oblique.ttf.woff2') format('woff'),
+    url('../resourse/font/SmileySans/SmileySans-Oblique.otf.woff2')  format('woff'),
+    url('../resourse/font/SmileySans/SmileySans-Oblique.ttf') format('truetype'),
+    url('../resourse/font/SmileySans/SmileySans-Oblique.otf') format('opentype');
+}
