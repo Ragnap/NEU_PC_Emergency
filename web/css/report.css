@@ -1,0 +1,163 @@
+body {
+    background-color: rgb(50, 53, 66);
+    overflow-x: hidden;
+}
+input{
+    margin: auto 0 auto 2em;
+    padding-left: 1em;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    background-color: rgb(60, 64, 87, 0.3);
+    color: rgb(172, 50, 49);
+    word-break: break-all;
+    word-wrap: break-word;
+    border-bottom: 2px solid rgb(172, 50, 49);
+}
+button{
+    margin-top: 3em;
+    width: 200px;
+    height: 60px;
+    color: #333;
+    background-color: rgb(255,254,254);
+    border-radius: 4px;
+    transition: .3s;
+    margin-bottom: 10px;
+    cursor: pointer;
+    box-shadow:0 0 10px rgb(233, 195, 182);
+    border: none;
+    font-family: "SmileySans", sans-serif;
+    font-weight: 700;
+    font-size: 1.5em;
+    letter-spacing: 2px;
+    align-self: center;
+    justify-self: center;
+}
+.detail {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    width: 100vw;
+    background-color: rgb(50, 53, 66);
+}
+
+
+.detail .up_detail_box {
+    margin-top: 15vh;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    width: 100vw;
+    background-color: rgb(50, 53, 66);
+}
+
+.big_box {
+    height: 200px;
+    display: flex;
+    margin-left: 20%;
+    margin-right: 15%;
+}
+
+.big_box .subtitle {
+    float: left;
+    padding: 0.5em;
+    height: 95px;
+    width: 80px;
+    min-width: 80px;
+    min-height: 80px;
+    color: rgb(255, 254, 254);
+    font-family: "SmileySans", sans-serif;
+    font-size: 2.5em;
+    text-align: center;
+    align-self: center;
+    border: 8px double rgba(253, 75, 75, 0.7);
+    border-radius: 10px;
+}
+
+.big_box input {
+    font-size: 2em;
+    width: 40vw;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+.detail .down_detail_box {
+    margin-top: 5vh;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 100vw;
+    background-color: rgb(50, 53, 66);
+}
+
+.detail .down_detail_box .picture {
+    height: 320px;
+    width: 320px;
+    background-image: url("../resourse/pictures/medical.jpg");
+    background-size: cover;
+    border-radius: 50px;
+    box-shadow: 0 0 20px rgb(172, 50, 49);
+}
+
+.detail .down_detail_box .short_detail_box {
+    height: 320px;
+    width: 500px;
+    display: flex;
+    margin-left: 2em;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.small_box {
+    height: 80px;
+    width: 500px;
+    display: flex;
+}
+
+.small_box .subtitle {
+    float: left;
+    height: 80px;
+    width: 100px;
+    color: rgb(255, 254, 254);
+    font-family: "SmileySans", sans-serif;
+    font-size: 2em;
+    line-height: 80px;
+    text-align: right;
+}
+
+.small_box input {
+    width: 300px;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    font-size: 1.5em;
+}
+
+
+.no_result{
+    position: relative;
+    top:30%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-self: center;
+}
+.no_result .icon{
+    height: 150px;
+    width: 150px;
+    background-image: url("../resourse/pictures/disconnected.png");
+    background-position: center;
+    background-size: cover;
+    justify-self: center;
+    align-self: center;
+}
+.no_result .text{
+    margin-top:1em;
+    font-size: 3em;
+    font-family: "SmileySans", sans-serif;
+    text-align: center;
+    color: rgb(172, 50, 49);
+    letter-spacing: 0.1em;
+}

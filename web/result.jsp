@@ -17,7 +17,7 @@
     <ul class="nav_box">
         <li><a href="${pageContext.request.contextPath}/index.jsp">首页</a></li>
         <li><a href="#">故障诊断</a></li>
-        <li><a href="">提交病历</a></li>
+        <li><a href="${pageContext.request.contextPath}/report.jsp">提交病历</a></li>
     </ul>
     <%--未登录则显示登录注册栏--%>
     <%

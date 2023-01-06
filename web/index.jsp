@@ -18,8 +18,8 @@
 <header class="default">
     <ul class="nav_box">
         <li><a href="#">首页</a></li>
-        <li><a href="search.jsp">故障诊断</a></li>
-        <li><a href="">提交病历</a></li>
+        <li><a href="${pageContext.request.contextPath}/search.jsp">故障诊断</a></li>
+        <li><a href="${pageContext.request.contextPath}/report.jsp">提交病历</a></li>
     </ul>
     <%--未登录则显示登录注册栏--%>
     <%
@@ -93,20 +93,20 @@
         </div>
     </div>
 
-    <!-- 预约板块 -->
+    <!-- 提交板块 -->
     <div class="appointment_background background"></div>
     <div class="appointment_book">
-        <!-- 预约子标题 -->
+        <!-- 提交子标题 -->
         <div class="appointment_title">
-            需要<span class="shake">帮助！</span>
+            <span class="shake">提供</span>经验！
         </div>
-        <!-- 预约按钮 -->
+        <!-- 提交按钮 -->
         <div class="appointment_book_info_box">
             <div class="appointment_book_info">问题百出？</div>
             <div class="appointment_book_info">药到病除！</div>
         </div>
         <div class="appointment_book_button_box">
-            <button class="appointment_book_button">现在挂号</button>
+            <button class="appointment_book_button" onclick="location.href='report.jsp'">提交病历</button>
             <span class="appointment_book_button_pointer"></span>
         </div>
     </div>
