@@ -24,7 +24,7 @@ public class UserDB extends Database{
     }
 
     /**
-     * 查找所有用户
+     * 根据用户名查找用户
      */
     public UserData findUser(String username) throws SQLException {
         PreparedStatement prep = connection.prepareStatement("select * from web.user where username=?");

@@ -1,15 +1,12 @@
+import database.ProblemDB;
+
+import java.sql.Date;
 import java.sql.SQLException;
+import java.sql.Timestamp;
 
 public class test {
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
-//        Database database = new Database();
-////        database.addUser("admin","admin");
-////        System.out.println(database.getAllUser().size());
-//        for (UserData now:database.getAllUser()) {
-//            System.out.println(now);
-//        }
-//        System.out.println(database.checkUser("李雨松","123456"));
-//
-//        database.close();
+        ProblemDB problemDB = new ProblemDB();
+        System.out.println(problemDB.searchProblem("蓝屏").get(0).getSolution());
     }
 }

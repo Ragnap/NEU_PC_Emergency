@@ -62,11 +62,12 @@
 <div class="library_search">
     <div class="library_search_box">
         <div class="library_search_input_box">
-            <input type="text" required>
-            <span>描述一下症状吧</span>
+            <form method="post" action="./search">
+                <input type="text" name="keyword" required>
+                <span>描述一下症状吧</span>
+            </form>
         </div>
     </div>
-
 </div>
 
 </body>

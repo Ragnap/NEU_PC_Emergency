@@ -85,8 +85,10 @@
                 等常见病的患机先进行自我诊断
             </div>
             <div class="library_search_input_box">
-                <input type="text" required>
-                <span>症状是……</span>
+                <form method="post" action="./search">
+                    <input type="text" name="keyword" required>
+                    <span>症状是……</span>
+                </form>
             </div>
         </div>
     </div>

@@ -1,0 +1,157 @@
+div {
+    cursor: default;
+}
+a{
+    text-decoration: none;
+    color: rgb(255,255,255);
+}
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin: 0;
+    padding: 0;
+    min-width: 500px;
+    background-color: rgb(17, 115, 170);
+    overflow: hidden;
+}
+
+.library_search {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 300px;
+}
+
+.library_search_box {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    cursor: default;
+    height: 300px;
+    width: 40vw;
+}
+
+.library_search_input_box {
+    position: relative;
+    width: 40vw;
+}
+
+.library_search_input_box input {
+    position: absolute;
+    width: 40vw;
+    padding: 20px;
+    background-color: rgb(17, 115, 170);
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 20px;
+    outline: none;
+    color: #fff;
+    font-size: 2em;
+}
+
+.library_search_input_box input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.library_search_input_box span {
+    position: absolute;
+    font-family: "SmileySans", sans-serif;
+    left: 0;
+    pointer-events: none;
+    color: rgb(255, 255, 255);
+    transition: 0.3s;
+    transform: translateX(5em) translateY(-7px);
+    font-size: 1em;
+    padding: 0 10px;
+    overflow-y: hidden;
+    background-color: rgb(17, 115, 170);
+    border-left: 1px solid rgb(255, 255, 255);
+    border-right: 1px solid rgb(255, 255, 255);
+    letter-spacing: 0.1em;
+}
+
+.search_result {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.search_result .no_result{
+    height: 100px;
+}
+.search_result .no_result .icon{
+    float: left;
+    height: 100px;
+    width: 100px;
+    background-image: url("../resourse/pictures/disconnected.png");
+    background-position: center;
+    background-size: cover;
+}
+.search_result .no_result .text{
+    float: right;
+    padding-left:1em;
+    height: 100px;
+    font-size: 2em;
+    font-family: "SmileySans", sans-serif;
+    line-height: 50px;
+    color: rgb(255,255,255);
+}
+
+.search_result_box {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 20px;
+    border: 2px solid rgb(255,255,255);
+    border-radius: 20px;
+}
+
+.search_result_box .subtitle {
+    padding: 0.5em 0;
+    border-bottom: 2px solid rgb(255,255,255);
+}
+.search_result_box .subtitle ul{
+
+}
+.search_result_box .subtitle li{
+    font-family: "SmileySans", sans-serif;
+    font-size: 1.75em;
+    letter-spacing: 0.1em;
+}
+ul{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+li{
+    text-align:center;
+    color: rgb(255,255,255);
+}
+
+li.problem_describe{
+    width: 40vw;
+    border-right: 2px solid rgba(255,255,255,0.5);
+}
+.subtitle li.problem_describe{
+    border-right: 2px solid rgb(255,255,255);
+}
+li.problem_model{
+    width: 15vw;
+    border-right: 2px solid rgba(255,255,255,0.5);
+}
+.subtitle li.problem_model{
+    border-right: 2px solid rgb(255,255,255);
+}
+li.problem_system{
+    width: 15vw;
+}
+
+.search_result_box .signal {
+
+}

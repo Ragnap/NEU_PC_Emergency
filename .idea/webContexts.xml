@@ -5,6 +5,7 @@
       <map>
         <entry key="file://$PROJECT_DIR$/web/CSS" value="file://$PROJECT_DIR$/web" />
         <entry key="file://$PROJECT_DIR$/web/index.jsp" value="file://$PROJECT_DIR$/web" />
+        <entry key="file://$PROJECT_DIR$/web/result.jsp" value="file://$PROJECT_DIR$/web" />
       </map>
     </option>
   </component>
