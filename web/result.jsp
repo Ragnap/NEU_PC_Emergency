@@ -1,12 +1,6 @@
 <%@ page import="model.UserData" %>
 <%@ page import="java.util.ArrayList" %>
-<%@ page import="model.ProblemData" %><%--
-  Created by IntelliJ IDEA.
-  User: Ragna
-  Date: 2023/1/6
-  Time: 14:59
-  To change this template use File | Settings | File Templates.
---%>
+<%@ page import="model.ProblemData" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>

@@ -14,7 +14,7 @@
 <header class="login_color">
     <ul class="nav_box">
         <li><a href="index.jsp">首页</a></li>
-        <li><a href="">故障诊断</a></li>
+        <li><a href="search.jsp">故障诊断</a></li>
         <li><a href="">维修预约</a></li>
     </ul>
     <ul class="account_box">

@@ -189,3 +189,25 @@ header.login_color .nav_box {
 header.login_color .account_box {
     margin-right: 15% !important;
 }
+/*详情界面配色*/
+header.detail_color {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+header.detail_color ul li,
+header.detail_color div {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+header.detail_color ul li a,
+header.detail_color div span {
+    color: rgba(172, 50, 49, 0.65);
+}
+
+header.detail_color .nav_box {
+    margin-left: 10% !important;
+}
+
+header.detail_color .account_box {
+    margin-right: 18% !important;
+}
