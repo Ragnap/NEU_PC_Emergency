@@ -19,7 +19,7 @@
     <ul class="nav_box">
         <li><a href="#">首页</a></li>
         <li><a href="search.jsp">故障诊断</a></li>
-        <li><a href="">维修预约</a></li>
+        <li><a href="">提交病历</a></li>
     </ul>
     <%--未登录则显示登录注册栏--%>
     <%
@@ -115,11 +115,7 @@
 
 </div>
 </div>
-<!-- 底部链接 -->
-<!-- <div class="">
 
-</div> -->
-</body>
 <!-- 导航栏变色效果 -->
 <script type="text/javascript">
     let page = document.querySelector(".page")
@@ -156,5 +152,7 @@
         greeting.innerHTML = "晚上好，"
     }
 </script>
+</body>
+
 
 </html>

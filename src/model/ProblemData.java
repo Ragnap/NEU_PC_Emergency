@@ -29,8 +29,8 @@ public class ProblemData {
         return username;
     }
 
-    public Date getTime() {
-        return time;
+    public String getTime() {
+        return time.toString();
     }
 
     public String getDescribe() {
@@ -48,4 +48,5 @@ public class ProblemData {
     public String getSolution() {
         return solution;
     }
+
 }

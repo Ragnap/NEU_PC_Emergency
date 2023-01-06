@@ -17,7 +17,7 @@
     <ul class="nav_box">
         <li><a href="${pageContext.request.contextPath}/index.jsp">首页</a></li>
         <li><a href="#">故障诊断</a></li>
-        <li><a href="">维修预约</a></li>
+        <li><a href="">提交病历</a></li>
     </ul>
     <%--未登录则显示登录注册栏--%>
     <%
@@ -81,13 +81,13 @@
         <div class="signal">
             <ul>
                 <li class="problem_describe"><a
-                        href="${pageContext.request.contextPath}/detail.jsp?problem=${now.getId()}">${now.getDescribe()}</a>
+                        href="./getProblem?problem=${now.getId()}" target="_blank">${now.getDescribe()}</a>
                 </li>
                 <li class="problem_model"><a
-                        href="${pageContext.request.contextPath}/detail.jsp?problem=${now.getId()}">${now.getModel()}</a>
+                        href="./getProblem?problem=${now.getId()}" target="_blank">${now.getModel()}</a>
                 </li>
                 <li class="problem_system"><a
-                        href="${pageContext.request.contextPath}/detail.jsp?problem=${now.getId()}">${now.getSystem()}</a>
+                        href="./getProblem?problem=${now.getId()}" target="_blank">${now.getSystem()}</a>
                 </li>
             </ul>
         </div>
@@ -95,8 +95,6 @@
     </div>
 </div>
 <% } %>
-
-</body>
 <!-- 问候语根据时间修改 -->
 <script>
     let greeting = document.querySelector('.greeting');
@@ -115,4 +113,6 @@
         greeting.innerHTML = "晚上好，"
     }
 </script>
+</body>
+
 </html>

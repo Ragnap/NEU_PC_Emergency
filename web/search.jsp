@@ -16,7 +16,7 @@
     <ul class="nav_box">
         <li><a href="index.jsp">首页</a></li>
         <li><a href="#">故障诊断</a></li>
-        <li><a href="">维修预约</a></li>
+        <li><a href="">提交病历</a></li>
     </ul>
     <%--未登录则显示登录注册栏--%>
     <%
@@ -64,7 +64,6 @@
     </div>
 </div>
 
-</body>
 <!-- 问候语根据时间修改 -->
 <script>
     let greeting = document.querySelector('.greeting');
@@ -84,4 +83,5 @@
     }
 </script>
 
+</body>
 </html>

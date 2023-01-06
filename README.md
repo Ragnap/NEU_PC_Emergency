@@ -30,14 +30,6 @@ Navicat for MySQL 16.1.2
 
 [pixel_TV.png](https://www.pixiv.net/artworks/96317312)
 
-[pixel_visitor](https://www.pixiv.net/artworks/95154286)
-
-[handpaint_GTX1080.jpg](https://www.pixiv.net/artworks/89274269)
-
-[handpaint_Macbook.jpg](https://www.pixiv.net/artworks/99648434)
-
-[pixel_box.jpg](https://www.pixiv.net/artworks/101395243)
-
 [medical.png](https://www.pixiv.net/artworks/91683595)
 
 [starry_sky.jpg](https://www.pixiv.net/artworks/104213674)

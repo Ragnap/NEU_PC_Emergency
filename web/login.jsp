@@ -15,7 +15,7 @@
     <ul class="nav_box">
         <li><a href="index.jsp">首页</a></li>
         <li><a href="search.jsp">故障诊断</a></li>
-        <li><a href="">维修预约</a></li>
+        <li><a href="">提交病历</a></li>
     </ul>
     <ul class="account_box">
     </ul>
@@ -52,9 +52,6 @@
 
     </div>
 </div>
-</body>
-
-
 <%--弹出servlet对应的反馈信息--%>
 <%
     String message = (String) request.getSession().getAttribute("user_message");
@@ -160,4 +157,8 @@
         }
     }
 </script>
+</body>
+
+
+
 </html>
