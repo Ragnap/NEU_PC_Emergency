@@ -48,12 +48,12 @@
         <div class="up_detail_box">
             <div class="big_box">
                 <div class="subtitle">问题描述</div>
-                <input type="text" name="describe">
+                <input id="input_describe" type="text" name="describe">
             </div>
 
             <div class="big_box">
                 <div class="subtitle">解决处方</div>
-                <input type="text" name="solution">
+                <input id="input_solution" type="text" name="solution">
             </div>
         </div>
         <div class="down_detail_box">
@@ -62,13 +62,13 @@
 
                 <div class="small_box">
                     <div class="subtitle">机型</div>
-                    <input type="text" name="model">
+                    <input id="input_model" type="text" name="model">
                 </div>
                 <div class="small_box">
                     <div class="subtitle">系统</div>
-                    <input type="text" name="system">
+                    <input id="input_system" type="text" name="system">
                 </div>
-                <button>提交!</button>
+                <button id="submit">提交!</button>
             </div>
         </div>
     </form>
@@ -90,6 +90,63 @@
         greeting.innerHTML = "傍晚好，"
     } else {
         greeting.innerHTML = "晚上好，"
+    }
+</script>
+
+<!-- 输入验证 -->
+<script>
+    // 登录验证
+    let describe = document.getElementById("input_describe");
+    let solution = document.getElementById("input_solution");
+    let model = document.getElementById("input_model");
+    let system = document.getElementById("input_system");
+
+    let submit = document.getElementById("submit");
+    submit.onclick = function () {
+        if (describe.value === "" || describe.value === null) {
+            alert("请输入故障的具体表现");
+            return false;
+        } else if (solution.value === "" || solution.value == null) {
+            alert("请输入故障的处理方式");
+            return false;
+        } else if (model.value === "" || model.value == null) {
+            alert("请输入出现故障的电脑的型号");
+            return false;
+        } else if (system.value === "" || system.value == null) {
+            alert("请输入出现故障的电脑的系统");
+            return false;
+        } else {
+            alert("感谢您的提交！");
+            return true;
+        }
+    }
+    // 注册验证
+    let sign_up_username = document.getElementById("sign_up_username");
+    let sign_up_password = document.getElementById("sign_up_password");
+    let check_password = document.getElementById("sign_up_check_password");
+    let sign_up = document.getElementById("sign_up_btn");
+    sign_up.onclick = function () {
+        if (sign_up_username.value === "" || sign_up_username.value === null) {
+            alert("用户名不能为空,请输入");
+            return false;
+        } else if (sign_up_username.value.length > 20) {
+            alert("用户名不能超过20字符,请重新输入");
+            return false;
+        } else if (sign_up_password.value === "" || sign_up_password.value === null) {
+            alert("密码不能为空,请输入");
+            return false;
+        } else if (check_password.value === "" || check_password.value === null) {
+            alert("请再次输入密码进行确认");
+            return false;
+        } else if (sign_up_password.value !== check_password.value) {
+            alert("两次输入的密码不一致，请重新输入");
+            return false;
+        } else if (sign_up_password.value.length > 20) {
+            alert("密码不能超过20字符,请重新输入");
+            return false;
+        } else {
+            return true;
+        }
     }
 </script>
 </body>

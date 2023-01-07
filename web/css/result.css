@@ -153,5 +153,5 @@ li.problem_system{
 }
 
 .search_result_box .signal {
-
+    border-bottom: 2px solid rgba(255,255,255,0.5);
 }

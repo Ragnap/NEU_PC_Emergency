@@ -29,14 +29,12 @@ public class SignUpServlet extends HttpServlet {
             if (userDB.existUser(username)) {
                 req.getSession().setAttribute("user_message", "已存在相同的用户名！");
                 req.getSession().setAttribute("user_action", "signUp");
-                resp.sendRedirect("login.jsp");
-
             } else {
                 userDB.addUser(username,password);
                 req.getSession().setAttribute("user_message", "注册成功!");
                 req.getSession().setAttribute("User", userDB.findUser(username));
-                resp.sendRedirect("index.jsp");
             }
+            resp.sendRedirect("login.jsp");
         } catch (ClassNotFoundException | SQLException e) {
             throw new RuntimeException(e);
         }
